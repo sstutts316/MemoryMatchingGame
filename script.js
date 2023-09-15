@@ -1,7 +1,7 @@
 const cards = document.querySelectorAll('.card');
 let flippedCards = [];
 let matchedPairs = 0;
-let remainingTime = 6000;
+let remainingTime = 60;
 let timerInterval;
 
 const timerDisplay = document.getElementById('timer');
@@ -26,7 +26,7 @@ function handleCardClick(card) {
         }
 
         if (flippedCards.length === 2) {
-            setTimeout(checkMatch, 1000);
+            setTimeout(checkMatch, 500);
         }
     }
 }
@@ -99,7 +99,7 @@ function endGame(hasWon) {
 
     matchedPairs = 0;
     matchCountDisplay.textContent = matchedPairs;
-    remainingTime = 6000;
+    remainingTime = 60;
     timerDisplay.textContent = remainingTime;
     timerInterval = null;
 
